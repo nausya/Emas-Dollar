@@ -50,3 +50,6 @@ def download_data(op, start_date, end_date):
     df = yf.download(op, start=start_date, end=end_date, progress=False)
     return df
 ####### END OF FUNGSI AMBIL DATA SAHAM ############
+
+if __name__ == '__main__':
+    main()
