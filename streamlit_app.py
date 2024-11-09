@@ -35,6 +35,13 @@ st.header('TRADING EMAS TERHADAP DOLLAR')
 
 ###### FUNGSI MENU #############
 def main():
+    selected2 = option_menu(None, ["Home", "Cari Data", "Screener", 'Prediksi'], 
+                            icons=['house', 'file-earmark-text', 
+                            'sliders2-vertical', 'graph-up-arrow'], menu_icon="cast", default_index=0, orientation="horizontal")
+    if selected2 == 'Cari Data':
+         dataframe()
+    else:
+         tech_indicators(
 ### Taruh kalo ada menu
 ###### END OF FUNGSI MENU #############
 @st.cache_resource
