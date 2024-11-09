@@ -1,15 +1,39 @@
-import altair as alt
-import pandas as pd
 import streamlit as st
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import seaborn.objects as so
+import yfinance as yf
+import numpy as np
+import plotly.figure_factory as ff
+import plotly.graph_objects as go
+from matplotlib import markers
+from streamlit_option_menu import option_menu
+from ta.volatility import BollingerBands
+from ta.trend import MACD, EMAIndicator, SMAIndicator
+from ta.momentum import RSIIndicator
+import datetime
+import pytz
+from datetime import date
+import socket
+from csv import writer
+from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.neighbors import KNeighborsRegressor
+from xgboost import XGBRegressor
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.ensemble import ExtraTreesRegressor
+from sklearn.metrics import r2_score, mean_absolute_error
+import os
+pd.set_option('future.no_silent_downcasting', True)
 
 # Show the page title and description.
-st.set_page_config(page_title="Movies dataset", page_icon="🎬")
-st.title("🎬 Movies dataset")
+st.set_page_config(page_title="Grafik Emas Terhadap Dollar", page_icon="🎬")
+st.title("🎬 eMAS DOllar")
 st.write(
     """
-    This app visualizes data from [The Movie Database (TMDB)](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata).
-    It shows which movie genre performed best at the box office over the years. Just 
-    click on the widgets below to explore!
+    Grafik Perdangan Emas Terhadap Dollar Amerika
     """
 )
 
