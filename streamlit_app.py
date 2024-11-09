@@ -41,8 +41,7 @@ def main():
     if selected2 == 'Cari Data':
          dataframe()
     else:
-         tech_indicators(
-### Taruh kalo ada menu
+         tech_indicators()
 ###### END OF FUNGSI MENU #############
 @st.cache_resource
 
